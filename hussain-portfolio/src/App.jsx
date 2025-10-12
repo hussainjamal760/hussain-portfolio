@@ -18,51 +18,52 @@ const COLORS = {
 const PROJECTS = [
   {
     id: 1,
-    title: 'Nexus SaaS Platform',
-    tagline: 'Full-stack collaborative workspace with real-time features.',
-    tech: ['Next.js', 'Express', 'MongoDB', 'Tailwind', 'Stripe', 'Socket.io'],
-    problem: 'Siloed team communication, inefficient project tracking, and complex billing hindering productivity.',
-    solution: 'Developed an integrated platform offering real-time chat, collaborative task management, file sharing, and automated subscription handling via Stripe. Implemented WebSockets for instant updates.',
-    impact: 'Reduced client churn by 15% through improved feature set, increased team velocity by 25% with streamlined workflows, and boosted user engagement by 30%.',
-    liveLink: '#',
-    githubLink: '#',
+    title: 'Shippo ,MERN multi-vendor Platform',
+    tagline: 'Full-stack collaborative Ecommerce with real-time features.',
+    tech: ['React.js', 'Express', 'Node.js'  ,'MongoDB', 'Tailwind', 'Stripe', 'Socket.io' , 'Cloudinary' ],
+    problem: 'In today’s digital marketplace, small and mid-scale sellers struggle to reach customers efficiently due to limited access to scalable, easy-to-manage online platforms. Most existing e-commerce systems are either too complex or lack real-time interaction between buyers and sellers, leading to poor customer engagement and inefficient order management.',
+    solution: 'SHIPPO solves these challenges by providing a scalable multi-vendor e-commerce platform that empowers sellers to manage their shops, products, and orders effortlessly while ensuring a smooth shopping experience for buyers . It integrates real-time buyer-seller chat (Socket.io), secure JWT-based authentication, and a centralized admin dashboard for system-wide control. Built with React, Node.js, Express, MongoDB, and Tailwind CSS, SHIPPO ensures fast performance, modern UI, and cloud-ready deployment on Vercel.',
+    impact: 'SHIPPO streamlines online retail by bridging the gap between multiple vendors and customers in a single ecosystem. It enables entrepreneurs to scale digitally without technical barriers while offering buyers transparency and instant communication. This project demonstrates how real-time features and scalable architecture can elevate user experience, enhance business efficiency, and pave the way for the future of collaborative e-commerce platforms.',
+    liveLink: 'https://multi-vendor-shippo-1.onrender.com/',
+    githubLink: 'https://github.com/hussainjamal760/multi-vendor-shippo/tree/main',
     lighthouse: 98,
-    imageUrl: 'https://via.placeholder.com/400x250/0B1220/00D1FF?text=Nexus+Preview', // Placeholder
+    imageUrl: 'shippo1.png', // Placeholder
     videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&loop=1&mute=1&controls=0&playlist=dQw4w9WgXcQ', // Rickroll for demo
     galleryImages: [
-      'https://via.placeholder.com/800x500/0B1220/00D1FF?text=Nexus+Screenshot+1',
-      'https://via.placeholder.com/800x500/0B1220/00D1FF?text=Nexus+Screenshot+2',
-      'https://via.placeholder.com/800x500/0B1220/00D1FF?text=Nexus+Screenshot+3',
+      'shippo2.png',
+      'shippo3.png',
+      'shippo4.png',
     ],
   },
   {
     id: 2,
-    title: 'E-commerce API Gateway',
-    tagline: 'Scalable Microservices with Node.js and TypeScript.',
-    tech: ['Node.js', 'TypeScript', 'PostgreSQL', 'Redis', 'Kafka', 'Docker'],
-    problem: 'Legacy monolith architecture struggling under peak load, leading to frequent downtimes and slow response times.',
-    solution: 'Re-architected into a microservices-based API gateway handling authentication, product catalog, inventory, and order processing. Employed event-driven architecture with Kafka for inter-service communication.',
-    impact: 'Achieved 99.99% uptime and 10x throughput capacity during Black Friday sales. Reduced API response times by 60%, significantly improving user experience.',
-    liveLink: '#',
-    githubLink: '#',
+    title: 'Real Estate , MERN',
+    tagline: 'Scalable real estate project with Node.js and React.',
+    tech: ['React.js', 'Express', 'Node.js'  ,'MongoDB', 'Tailwind', 'Cloudinary' ],
+    problem: 'Many property buyers, sellers, and landlords struggle to find a simple, secure, and efficient online platform to manage property listings and connect directly with potential tenants or buyers. Existing solutions are often cluttered, expensive, or lack personalized features like real-time contact and easy property management.',
+    solution: 'This Full-Stack Real Estate Application provides a streamlined, user-friendly platform where users can sign up, list properties, search listings, upload images, and contact landlords all in one place. Built using the MERN stack (MongoDB, Express.js, React, Node.js), it features JWT and Google OAuth authentication, CRUD operations, advanced search filters, and a user dashboard for managing profiles and listings. The app is fully deployed on Render for public access and scalability.',
+    impact: 'This project simplifies property management and house-hunting by offering a modern, responsive, and secure platform for real estate users. It bridges the gap between landlords and tenants with easy communication tools and intuitive listing features. Beyond its functionality, this project strengthened my skills in authentication, API integration, Redux state management, and full-stack deployment, reflecting a real-world scalable product experience similar to professional real estate platforms.',
+    liveLink: 'https://mern-real-estate-9rpz.onrender.com/',
+    githubLink: 'https://github.com/hussainjamal760/mern-real-estate',
     lighthouse: 95,
-    imageUrl: 'https://via.placeholder.com/400x250/0B1220/FFB86B?text=API+Gateway+Preview',
+    imageUrl: 'estate1.png',
     videoUrl: 'https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&loop=1&mute=1&controls=0&playlist=tgbNymZ7vqY', // Example video
     galleryImages: [
-      'https://via.placeholder.com/800x500/0B1220/FFB86B?text=API+Screenshot+1',
-      'https://via.placeholder.com/800x500/0B1220/FFB86B?text=API+Screenshot+2',
+      'estate2.png',
+      'estate3.png',
+      'estate4.png',
     ],
   },
   {
     id: 3,
-    title: 'Real-time Dashboards',
-    tagline: 'Data visualization platform with Socket.io and D3.js.',
-    tech: ['React', 'D3.js', 'Socket.io', 'Mongoose', 'Chart.js'],
-    problem: 'Need for immediate data synchronization and interactive visualization across multiple user dashboards.',
-    solution: 'Developed a real-time analytics dashboard pushing live updates of key business metrics using WebSockets. Integrated D3.js and Chart.js for dynamic, interactive data visualization.',
-    impact: 'Improved operational decision speed by 40% due to instant data access. Enhanced user engagement with intuitive and highly responsive data insights.',
-    liveLink: '#',
-    githubLink: '#',
+    title: 'Real-Time Multiplayer Chess Game!',
+    tagline: 'Chess game with Socket.io and NODE.',
+    tech: ['Node.js', 'Socket.io', 'chess.js'],
+    problem: 'Most online chess platforms are either too complex for beginners or lack real-time social interaction like chatting and spectating. There’s a need for a lightweight, interactive, and easily accessible platform that lets players compete and communicate instantly without heavy setup or registration barriers.',
+    solution: 'This Real-Time Multiplayer Chess Game enables players to challenge friends, spectate live matches, and chat in real-time — all within a smooth, browser-based experience. Built using Node.js, Express.js, Socket.io, and Chess.js, the app maintains synchronized game states, displays captured pieces, declares winners automatically, and supports instant updates for all connected users. Deployed on Render, it’s fast, stable, and easy to access from anywhere..',
+    impact: 'This project enhances the online chess experience by combining gameplay, communication, and live interaction into a single real-time environment. It demonstrates how Socket.io and Node.js can power dynamic multiplayer systems and foster community engagement. Beyond just a game, it’s a reflection of learning real-time backend architecture, event handling, and live synchronization  skills essential for building scalable interactive applications.',
+    liveLink: 'https://chess-game-gebt.onrender.com/',
+    githubLink: 'https://github.com/hussainjamal760/chess-game',
     lighthouse: 96,
     imageUrl: 'https://via.placeholder.com/400x250/0B1220/00D1FF?text=Dashboard+Preview',
     videoUrl: 'https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&loop=1&mute=1&controls=0&playlist=tgbNymZ7vqY', // Example video
@@ -255,15 +256,20 @@ const modalVariants = {
 
 /**
  * Wraps a section to apply reveal-on-scroll animation.
+ * FIX: Simplified motionProps logic for more reliable "animate once" behavior.
  */
 const SectionWrapper = ({ id, children, className = '' }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
-  const shouldReduceMotion = useReducedMotion();
+  const shouldReducedMotion = useReducedMotion();
 
-  const motionProps = shouldReduceMotion
-    ? { initial: false, animate: isInView ? 'visible' : 'hidden' }
-    : { initial: 'hidden', animate: isInView ? 'visible' : 'hidden' };
+  const motionProps = shouldReducedMotion
+    ? { initial: false, animate: false }
+    : {
+        initial: 'hidden',
+        animate: isInView ? 'visible' : 'hidden',
+        transition: containerVariants.visible.transition
+      };
 
   return (
     <motion.section
@@ -608,7 +614,7 @@ const AnimatedSkillCard = ({ skill, category }) => (
 
 
 /**
- * NEW: Tabbed Section for Experience, Education, and Achievements
+ * FIX: Tabbed Section - Framer Motion removed from internal tab logic for stability.
  */
 const TabbedSection = () => {
   const [activeTab, setActiveTab] = useState('experience');
@@ -619,15 +625,16 @@ const TabbedSection = () => {
     { key: 'achievements', name: 'Achievements', icon: Trophy, content: ACHIEVEMENTS },
   ];
 
-  const ActiveIcon = tabs.find(t => t.key === activeTab)?.icon || Briefcase;
   const activeContent = tabs.find(t => t.key === activeTab)?.content || [];
 
   return (
     <div id="timeline">
+      {/* Retain motion.h2 for SectionWrapper animation consistency */}
       <motion.h2 variants={itemVariants} className="text-center text-4xl font-bold mb-10 text-text">
         Timeline
       </motion.h2>
 
+      {/* Retain motion.div for SectionWrapper animation consistency */}
       <motion.div variants={itemVariants} className="max-w-4xl mx-auto mb-10">
         <div className="flex justify-center border-b-2 border-cyan/30">
           {tabs.map((tab) => (
@@ -648,19 +655,16 @@ const TabbedSection = () => {
       </motion.div>
 
       <div className="relative max-w-4xl mx-auto pt-4">
-        <motion.div
-          key={activeTab}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.3 }}
-          className="relative border-l-4 border-accent/50 ml-4 pl-8"
+        {/* REPLACED motion.div/AnimatePresence with plain div. Added Tailwind transition-opacity */}
+        <div
+          key={activeTab} // Key forces re-render/transition for tab change
+          className="relative border-l-4 border-accent/50 ml-4 pl-8 transition-opacity duration-300"
         >
           {activeContent.map((item, index) => (
-            <motion.div
+            // REPLACED motion.div with plain div.
+            <div
               key={index}
-              variants={itemVariants}
-              className="mb-8 relative"
+              className="mb-8 relative transition-opacity duration-300"
             >
               {/* Timeline Dot */}
               <div className="absolute w-4 h-4 rounded-full bg-accent -left-10 transform -translate-y-1 border-4 border-surface dark:border-darkSurface" />
@@ -669,9 +673,9 @@ const TabbedSection = () => {
               <h3 className="text-xl font-semibold text-text">{item.role}</h3>
               <p className="text-md text-gray-500 dark:text-gray-400">{item.company}</p>
               <p className="mt-2 text-sm text-text/80">{item.description}</p>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </div>
   );
@@ -679,22 +683,17 @@ const TabbedSection = () => {
 
 
 /**
- * OLD: Timeline component (Removed, replaced by TabbedSection)
- */
-
-/**
- * NEW: Contributions Section
+ * NEW: Contributions Section (FIX: Removed inner Framer Motion for stable visibility)
  */
 const ContributionsSection = () => {
   const ContributionBlock = ({ title, description, link, icon: Icon, color }) => (
-    <motion.a
+    // REPLACED motion.a with standard a tag and Tailwind hover classes
+    <a
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      variants={itemVariants}
-      className="block p-8 rounded-xl bg-surface shadow-xl dark:shadow-2xl dark:shadow-darkBg/50 transition-all duration-300 transform hover:scale-[1.03] hover:border-b-4"
+      className="block p-8 rounded-xl bg-surface shadow-xl dark:shadow-2xl dark:shadow-darkBg/50 transition-all duration-300 transform hover:scale-[1.03] hover:-translate-y-1 hover:border-b-4"
       style={{ borderBottomColor: color }}
-      whileHover={{ y: -3 }}
     >
       <Icon size={36} className="mb-4" style={{ color }} />
       <h3 className="text-2xl font-bold text-text mb-2">{title}</h3>
@@ -703,7 +702,7 @@ const ContributionsSection = () => {
         <Link size={16} />
         <span>View Profile</span>
       </span>
-    </motion.a>
+    </a>
   );
 
   return (
@@ -712,17 +711,18 @@ const ContributionsSection = () => {
         Code Contributions & Stats
       </motion.h2>
 
+      {/* Retain motion.div for staggered animation from SectionWrapper */}
       <motion.div variants={containerVariants} className="grid md:grid-cols-2 gap-10">
         <ContributionBlock
           title="GitHub Activity"
-          description="See my daily code contributions, repositories, and open source involvement on GitHub. (Placeholder for Contribution Graph)"
+          description="See my daily code contributions, repositories, and open source involvement on GitHub. "
           link="https://github.com/hussainjamal760"
           icon={Github}
           color={COLORS.cyan}
         />
         <ContributionBlock
           title="LeetCode Performance"
-          description="View my competitive programming profile and solve streak on LeetCode. (Placeholder for Contest Rating/Solved Count)"
+          description="View my competitive programming profile and solve streak on my LeetCode Profile. "
           link="https://leetcode.com/u/hussain_Jamal/"
           icon={Code}
           color={COLORS.accent}
@@ -866,7 +866,7 @@ const App = () => {
                 </a>
             </div>
             <p className="text-sm text-gray-500 dark:text-gray-400">
-                Crafted with React, Tailwind CSS, and Framer Motion.
+                Crafted with Love 💖
             </p>
             <p className="text-xs mt-2 text-gray-600 dark:text-gray-500">
                 &copy; {new Date().getFullYear()} Hussain Jamal. All rights reserved.
