@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence, useInView, useReducedMotion, useMotionValue, useTransform } from 'framer-motion';
-import { Sun, Moon, Briefcase, GraduationCap, Code, Globe, Github, Zap, Download, Mail, ArrowUp, X } from 'lucide-react'; // Added X icon
+import { Sun, Moon, Briefcase, GraduationCap, Code, Globe, Github, Zap, Download, Mail, ArrowUp, X, Trophy, BookOpen, Link, Monitor } from 'lucide-react'; // Added Trophy, BookOpen, Link, Monitor, and X icons
 
 // --- 1. CONFIGURATION AND MOCK DATA ---
 const COLORS = {
@@ -11,8 +11,8 @@ const COLORS = {
   darkBg: '#0B1220',
   darkSurface: '#192330',
   lightSurface: '#FFFFFF',
-  lightGray: '#E0E0E0', // Added for better text contrast
-  darkGray: '#333333', // Added for better text contrast
+  lightGray: '#E0E0E0',
+  darkGray: '#333333',
 };
 
 const PROJECTS = [
@@ -75,19 +75,41 @@ const PROJECTS = [
 ];
 
 const EXPERIENCE = [
-  { role: 'Senior MERN Developer', company: 'Innovatech Solutions', years: '2022 - Present', description: 'Led development of two major SaaS products, focusing on performance optimization and scaling database architecture. Mentored junior developers and implemented CI/CD pipelines.' },
-  { role: 'Full Stack Engineer', company: 'Digital Hive', years: '2019 - 2022', description: 'Built and maintained high-traffic customer-facing features using React and Node.js, improving load times by 30%. Collaborated with product teams to define technical specifications.' },
-  { role: 'Web Development Intern', company: 'Future Labs', years: '2018 - 2019', description: 'Assisted in building responsive component libraries and integrating RESTful APIs. Gained foundational experience in MERN stack development.' },
+  { role: 'Bronze level Fellow', company: 'Dev Weekends', years: '2025 - Present', description: 'Three months of the Dev Weekend Fellowship were a transformative journey  I pushed my limits, mastered the MERN Stack, and strengthened my problem-solving with DSA. It taught me consistency, teamwork, and the real meaning of growth through continuous learning.' },
+  { role: 'Freelancer', company: 'Fiverr', years: '2022 - 2023', description: 'Gained hands-on experience as a Frontend Developer using JavaScript, building responsive and user-friendly web interfaces for clients on Fiverr while improving skills in real-world project delivery and client communication.' },
+
+];
+
+const EDUCATION = [
+  { role: 'BS. Computer Science', company: 'COMSATS , Lahore', years: '2025 - 2029', description: 'Focused on algorithms, data structures, and MERN fundamentals.' },
+  { role: 'Inter in Computer Science', company: 'Punjab College ,Pattoki', years: '2022 - 2024', description: 'Focused on C , frontend Fundamentals' },
+];
+
+const ACHIEVEMENTS = [
+  { role: 'Dev Weekends Fellowship Certified', company: 'Dev Weekends', years: '2025', description: 'Three months of the Dev Weekend Fellowship were a transformative journey  I pushed my limits, mastered the MERN Stack, and strengthened my problem-solving with DSA. It taught me consistency, teamwork, and the real meaning of growth through continuous learning.' },
+  { role: 'LeetCode 100', company: 'LeetCode', years: '2025', description: 'Completed 100 Leetcode problems, showcasing proficiency in advanced data structures and algorithms.' },
 ];
 
 const NAV_ITEMS = [
   { name: 'Projects', href: '#projects' },
   { name: 'Skills', href: '#skills' },
-  { name: 'Experience', href: '#experience' },
+  { name: 'Timeline', href: '#timeline' },
+  { name: 'Contributions', href: '#contributions' },
   { name: 'Contact', href: '#contact' },
 ];
 
-// --- 2. THEME CONTEXT AND HOOK ---
+const SKILLS = [
+  { name: 'React.js', category: 'Frontend' },
+  { name: 'Node.js', category: 'Backend' },
+  { name: 'Express.js', category: 'Backend' },
+  { name: 'MongoDB', category: 'Database' },
+  { name: 'JavaScript', category: 'Language' },
+  { name: 'C++', category: 'DSA' },
+  { name: 'Tailwind CSS', category: 'Styling' },
+  { name: 'Bootstrap CSS', category: 'Styling' },
+];
+
+// --- 2. THEME CONTEXT AND HOOK (No change) ---
 const useTheme = () => {
   const [theme, setTheme] = useState('dark');
 
@@ -122,7 +144,7 @@ const useTheme = () => {
 };
 
 
-// --- 3. CUSTOM HOOKS ---
+// --- 3. CUSTOM HOOKS (No change) ---
 
 /**
  * Hook for cursor-aware parallax and hover tilt on elements.
@@ -189,7 +211,7 @@ const useParallaxTilt = (tiltFactor = 8, parallaxFactor = 10) => {
 
   return {
     ref,
-    isHovered, // Expose isHovered state
+    isHovered,
     cardStyle: {
       rotateX: isHovered ? rotateX : 0,
       rotateY: isHovered ? rotateY : 0,
@@ -204,7 +226,7 @@ const useParallaxTilt = (tiltFactor = 8, parallaxFactor = 10) => {
   };
 };
 
-// --- 4. ANIMATION VARIANTS ---
+// --- 4. ANIMATION VARIANTS (No change) ---
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -259,7 +281,7 @@ const SectionWrapper = ({ id, children, className = '' }) => {
 };
 
 /**
- * Main application header with navigation and theme toggle.
+ * Main application header with navigation and theme toggle. (NAV_ITEMS updated)
  */
 const Header = ({ theme, toggleTheme }) => {
   const HJLogo = (
@@ -312,7 +334,7 @@ const Header = ({ theme, toggleTheme }) => {
 };
 
 /**
- * Hero component with the animated background mesh.
+ * Hero component with the animated background mesh. (No change)
  */
 const Hero = () => {
   return (
@@ -386,7 +408,7 @@ const Hero = () => {
 };
 
 /**
- * Project Detail Modal Component
+ * Project Detail Modal Component (No change)
  */
 const ProjectDetailModal = ({ project, onClose }) => {
   if (!project) return null;
@@ -487,7 +509,7 @@ const ProjectDetailModal = ({ project, onClose }) => {
 
 
 /**
- * Single project card with complex micro-interactions.
+ * Single project card with complex micro-interactions. (No change)
  */
 const ProjectCard = ({ project, onCardClick }) => {
   const { ref, isHovered, cardStyle, innerStyle } = useParallaxTilt();
@@ -566,36 +588,150 @@ const ProjectCard = ({ project, onCardClick }) => {
 };
 
 /**
- * Timeline component for Experience and Education.
+ * NEW: Animated Skill Card Component
  */
-const Timeline = ({ items, icon: Icon, title }) => {
+const AnimatedSkillCard = ({ skill, category }) => (
+  <motion.div
+    variants={itemVariants}
+    className="p-6 rounded-xl bg-primary shadow-lg dark:shadow-xl dark:shadow-darkBg/50 border border-cyan/10"
+    whileHover={{
+      scale: 1.05,
+      boxShadow: `0 0 20px 0 ${COLORS.cyan}80`, // Subtle cyan glow
+      transition: { duration: 0.2 },
+    }}
+  >
+    <Code size={32} className="mx-auto mb-3" style={{ color: COLORS.accent }} />
+    <h3 className="text-xl font-semibold text-text">{skill}</h3>
+    <p className="text-sm text-gray-500 dark:text-gray-400">{category}</p>
+  </motion.div>
+);
+
+
+/**
+ * NEW: Tabbed Section for Experience, Education, and Achievements
+ */
+const TabbedSection = () => {
+  const [activeTab, setActiveTab] = useState('experience');
+
+  const tabs = [
+    { key: 'experience', name: 'Experience', icon: Briefcase, content: EXPERIENCE },
+    { key: 'education', name: 'Education', icon: GraduationCap, content: EDUCATION },
+    { key: 'achievements', name: 'Achievements', icon: Trophy, content: ACHIEVEMENTS },
+  ];
+
+  const ActiveIcon = tabs.find(t => t.key === activeTab)?.icon || Briefcase;
+  const activeContent = tabs.find(t => t.key === activeTab)?.content || [];
+
   return (
-    <div className="space-y-12">
-      <motion.h2 variants={itemVariants} className="text-3xl font-bold border-b-2 pb-2 text-text border-cyan/30 flex items-center space-x-3">
-        <Icon size={30} style={{ color: COLORS.cyan }} />
-        <span>{title}</span>
+    <div id="timeline">
+      <motion.h2 variants={itemVariants} className="text-center text-4xl font-bold mb-10 text-text">
+        Timeline
       </motion.h2>
 
-      <div className="relative border-l-4 border-accent/50 ml-4 pl-8">
-        {items.map((item, index) => (
-          <motion.div
-            key={index}
-            variants={itemVariants}
-            className="mb-8 relative"
-          >
-            {/* Timeline Dot */}
-            <div className="absolute w-4 h-4 rounded-full bg-accent -left-10 transform -translate-y-1 border-4 border-surface dark:border-darkSurface" />
+      <motion.div variants={itemVariants} className="max-w-4xl mx-auto mb-10">
+        <div className="flex justify-center border-b-2 border-cyan/30">
+          {tabs.map((tab) => (
+            <button
+              key={tab.key}
+              onClick={() => setActiveTab(tab.key)}
+              className={`flex items-center space-x-2 px-6 py-3 text-lg font-semibold transition-colors duration-300 ${
+                activeTab === tab.key
+                  ? 'text-cyan border-b-4 border-cyan'
+                  : 'text-text/70 hover:text-cyan/80 border-b-4 border-transparent'
+              }`}
+            >
+              <tab.icon size={20} />
+              <span>{tab.name}</span>
+            </button>
+          ))}
+        </div>
+      </motion.div>
 
-            <p className="text-xs font-mono text-cyan tracking-wider uppercase mb-1">{item.years}</p>
-            <h3 className="text-xl font-semibold text-text">{item.role || item.institution}</h3>
-            <p className="text-md text-gray-500 dark:text-gray-400">{item.company || item.degree}</p>
-            <p className="mt-2 text-sm text-text/80">{item.description}</p>
-          </motion.div>
-        ))}
+      <div className="relative max-w-4xl mx-auto pt-4">
+        <motion.div
+          key={activeTab}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.3 }}
+          className="relative border-l-4 border-accent/50 ml-4 pl-8"
+        >
+          {activeContent.map((item, index) => (
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              className="mb-8 relative"
+            >
+              {/* Timeline Dot */}
+              <div className="absolute w-4 h-4 rounded-full bg-accent -left-10 transform -translate-y-1 border-4 border-surface dark:border-darkSurface" />
+
+              <p className="text-xs font-mono text-cyan tracking-wider uppercase mb-1">{item.years}</p>
+              <h3 className="text-xl font-semibold text-text">{item.role}</h3>
+              <p className="text-md text-gray-500 dark:text-gray-400">{item.company}</p>
+              <p className="mt-2 text-sm text-text/80">{item.description}</p>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </div>
   );
 };
+
+
+/**
+ * OLD: Timeline component (Removed, replaced by TabbedSection)
+ */
+
+/**
+ * NEW: Contributions Section
+ */
+const ContributionsSection = () => {
+  const ContributionBlock = ({ title, description, link, icon: Icon, color }) => (
+    <motion.a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      variants={itemVariants}
+      className="block p-8 rounded-xl bg-surface shadow-xl dark:shadow-2xl dark:shadow-darkBg/50 transition-all duration-300 transform hover:scale-[1.03] hover:border-b-4"
+      style={{ borderBottomColor: color }}
+      whileHover={{ y: -3 }}
+    >
+      <Icon size={36} className="mb-4" style={{ color }} />
+      <h3 className="text-2xl font-bold text-text mb-2">{title}</h3>
+      <p className="text-gray-500 dark:text-gray-400 mb-4">{description}</p>
+      <span className="flex items-center space-x-1 text-sm font-semibold" style={{ color }}>
+        <Link size={16} />
+        <span>View Profile</span>
+      </span>
+    </motion.a>
+  );
+
+  return (
+    <SectionWrapper id="contributions" className="bg-primary">
+      <motion.h2 variants={itemVariants} className="text-center text-4xl font-bold mb-16 text-text">
+        Code Contributions & Stats
+      </motion.h2>
+
+      <motion.div variants={containerVariants} className="grid md:grid-cols-2 gap-10">
+        <ContributionBlock
+          title="GitHub Activity"
+          description="See my daily code contributions, repositories, and open source involvement on GitHub. (Placeholder for Contribution Graph)"
+          link="https://github.com/hussainjamal760"
+          icon={Github}
+          color={COLORS.cyan}
+        />
+        <ContributionBlock
+          title="LeetCode Performance"
+          description="View my competitive programming profile and solve streak on LeetCode. (Placeholder for Contest Rating/Solved Count)"
+          link="https://leetcode.com/u/hussain_Jamal/"
+          icon={Code}
+          color={COLORS.accent}
+        />
+      </motion.div>
+    </SectionWrapper>
+  );
+};
+
 
 // --- 6. MAIN APP COMPONENT ---
 
@@ -644,24 +780,20 @@ const App = () => {
       <main>
         <Hero />
 
-        {/* --- Tech Stack Section --- */}
+        {/* --- Tech Stack Section (Updated with AnimatedSkillCard) --- */}
         <SectionWrapper id="skills" className="bg-surface">
           <motion.h2 variants={itemVariants} className="text-center text-4xl font-bold mb-16 text-text">
             My Expertise
           </motion.h2>
 
           <motion.div variants={containerVariants} className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {['JavaScript' , 'React.js (Frontend)', 'Node.js (Backend)','Express.js (Backend)', 'MongoDB (Database)','C++ (DSA)' ,'Bootstrap CSS (Styling)', 'Tailwind CSS (Styling)'].map((skill, index) => (
-              <motion.div key={index} variants={itemVariants} className="p-6 rounded-xl bg-primary shadow-lg dark:shadow-xl dark:shadow-darkBg/50 border border-cyan/10">
-                <Code size={32} className="mx-auto mb-3" style={{ color: COLORS.accent }} />
-                <h3 className="text-xl font-semibold text-text">{skill.split('(')[0].trim()}</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">{skill.split('(')[1]}</p>
-              </motion.div>
+            {SKILLS.map((skill, index) => (
+              <AnimatedSkillCard key={index} skill={skill.name} category={skill.category} />
             ))}
           </motion.div>
         </SectionWrapper>
 
-        {/* --- Projects Section --- */}
+        {/* --- Projects Section (No change) --- */}
         <SectionWrapper id="projects">
           <motion.h2 variants={itemVariants} className="text-center text-4xl font-bold mb-16 text-text">
             Selected Projects
@@ -674,15 +806,15 @@ const App = () => {
           </motion.div>
         </SectionWrapper>
 
-        {/* --- Experience & Education Section --- */}
-        <SectionWrapper id="experience" className="bg-surface">
-          <div className="grid md:grid-cols-2 gap-16">
-            <Timeline items={EXPERIENCE} icon={Briefcase} title="Professional Experience" />
-            <Timeline items={[{ degree: 'M.S. Computer Science', institution: 'State University', years: '2017 - 2019', description: 'Specialization in Distributed Systems and Cloud Computing.' }, { degree: 'B.S. Software Engineering', institution: 'Tech Institute', years: '2013 - 2017', description: 'Focused on algorithms, data structures, and web fundamentals.' }]} icon={GraduationCap} title="Education & Certifications" />
-          </div>
+        {/* --- Experience & Education Section (Replaced by TabbedSection) --- */}
+        <SectionWrapper id="timeline" className="bg-surface">
+          <TabbedSection />
         </SectionWrapper>
+        
+        {/* --- Contributions Section (New) --- */}
+        <ContributionsSection />
 
-        {/* --- Contact & CTA Section --- */}
+        {/* --- Contact & CTA Section (No change) --- */}
         <SectionWrapper id="contact">
           <motion.div variants={containerVariants} className="max-w-4xl mx-auto text-center p-10 rounded-2xl bg-surface shadow-2xl dark:shadow-cyan/10">
             <motion.h2 variants={itemVariants} className="text-4xl font-bold text-text mb-4">
@@ -694,7 +826,7 @@ const App = () => {
 
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
               <motion.a
-                href="mailto:hussain.jamal@example.com"
+                href="mailto:hjamal9865@gmail.com"
                 className="group flex items-center justify-center space-x-2 px-8 py-3 text-lg font-semibold rounded-lg bg-cyan text-darkBg shadow-lg hover:shadow-cyan/50 transition-all duration-300 transform hover:scale-[1.03]"
                 whileHover={{ y: -3 }}
               >
@@ -715,9 +847,30 @@ const App = () => {
         </SectionWrapper>
       </main>
 
-      <footer className="py-8 border-t border-surface mt-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500 dark:text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Hussain Jamal All rights reserved.</p>
+      {/* --- Footer (Enhanced) --- */}
+      <footer className="py-10 border-t border-surface/50 mt-16 bg-surface">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div className="flex justify-center space-x-6 mb-4">
+                <a href="#hero" className="text-lg font-bold text-cyan hover:text-accent transition-colors">Hussain Jamal</a>
+            </div>
+            <div className="flex justify-center space-x-6 mb-6">
+                <a href="https://github.com/hussainjamal760" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" className="text-text hover:text-cyan transition-colors">
+                    <Github size={24} />
+                </a>
+                <a href="https://www.linkedin.com/in/hussain-jamal-b5a76531a/e" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" className="text-text hover:text-cyan transition-colors">
+                    {/* Placeholder for LinkedIn Icon - not in lucide-react by default, so using Globe for now */}
+                    <Globe size={24} /> 
+                </a>
+                <a href="mailto:hjamal9865@gmail.com" aria-label="Email Me" className="text-text hover:text-cyan transition-colors">
+                    <Mail size={24} />
+                </a>
+            </div>
+            <p className="text-sm text-gray-500 dark:text-gray-400">
+                Crafted with React, Tailwind CSS, and Framer Motion.
+            </p>
+            <p className="text-xs mt-2 text-gray-600 dark:text-gray-500">
+                &copy; {new Date().getFullYear()} Hussain Jamal. All rights reserved.
+            </p>
         </div>
       </footer>
 
