@@ -28,7 +28,7 @@ const PROJECTS = [
     githubLink: 'https://github.com/hussainjamal760/multi-vendor-shippo/tree/main',
     lighthouse: 98,
     imageUrl: 'shippo1.png', // Placeholder
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&loop=1&mute=1&controls=0&playlist=dQw4w9WgXcQ', // Rickroll for demo
+    videoUrl: 'mv-vid.webm', // Rickroll for demo
     galleryImages: [
       'shippo2.png',
       'shippo3.png',
@@ -37,7 +37,7 @@ const PROJECTS = [
   },
   {
     id: 2,
-    title: 'Real Estate , MERN',
+    title: 'Real Estate , MERN Stack Project',
     tagline: 'Scalable real estate project with Node.js and React.',
     tech: ['React.js', 'Express', 'Node.js'  ,'MongoDB', 'Tailwind', 'Cloudinary' ],
     problem: 'Many property buyers, sellers, and landlords struggle to find a simple, secure, and efficient online platform to manage property listings and connect directly with potential tenants or buyers. Existing solutions are often cluttered, expensive, or lack personalized features like real-time contact and easy property management.',
@@ -47,7 +47,7 @@ const PROJECTS = [
     githubLink: 'https://github.com/hussainjamal760/mern-real-estate',
     lighthouse: 95,
     imageUrl: 'estate1.png',
-    videoUrl: 'https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&loop=1&mute=1&controls=0&playlist=tgbNymZ7vqY', // Example video
+    videoUrl: 'RealEstate-vid.webm', // Example video
     galleryImages: [
       'estate2.png',
       'estate3.png',
@@ -65,12 +65,11 @@ const PROJECTS = [
     liveLink: 'https://chess-game-gebt.onrender.com/',
     githubLink: 'https://github.com/hussainjamal760/chess-game',
     lighthouse: 96,
-    imageUrl: 'https://via.placeholder.com/400x250/0B1220/00D1FF?text=Dashboard+Preview',
-    videoUrl: 'https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&loop=1&mute=1&controls=0&playlist=tgbNymZ7vqY', // Example video
+    imageUrl: 'chess1.png',
+    videoUrl: 'chess-vid.webm', // Example video
     galleryImages: [
-      'https://via.placeholder.com/800x500/0B1220/00D1FF?text=Dashboard+Screenshot+1',
-      'https://via.placeholder.com/800x500/0B1220/00D1FF?text=Dashboard+Screenshot+2',
-      'https://via.placeholder.com/800x500/0B1220/00D1FF?text=Dashboard+Screenshot+3',
+      'chess2.png',
+      'chess3.png',
     ],
   },
 ];
@@ -834,7 +833,7 @@ const App = () => {
                 <span>Get In Touch</span>
               </motion.a>
               <motion.a
-                href="me.png" 
+                href="hussain-cv.pdf" 
                 download
                 className="group flex items-center justify-center space-x-2 px-8 py-3 text-lg font-semibold rounded-lg border-2 border-accent text-accent hover:bg-accent/10 transition-colors duration-300 transform hover:scale-[1.03]"
                 whileHover={{ y: -3 }}
