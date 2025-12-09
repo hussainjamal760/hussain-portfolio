@@ -319,7 +319,8 @@ const SectionWrapper = ({ id, children, className = '' }) => {
 const Header = ({ theme, toggleTheme }) => {
   const HJLogo = (
     <span className="font-mono text-xl font-bold tracking-widest ">
-      <img className='h-26 object-contain rounded' src="me.png" alt="logo HJ" />
+      <img className='h-12 object-contain
+  border  rounded-full' src="me.png" alt="logo HJ" />
     </span>
   );
 
