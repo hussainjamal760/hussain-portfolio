@@ -16,27 +16,52 @@ const COLORS = {
 };
 
 const PROJECTS = [
+{
+  id: 1,
+  title: 'SkillStack – Secure LMS Platform',
+  tagline: 'DRM-protected online learning with scalable course delivery.',
+  tech: [
+    'Next.js', 'TypeScript', 'Tailwind', 'ShadCN', 'Redux Toolkit',
+    'React Hook Form', 'Zod', 'Express.js', 'MongoDB', 'Redis',
+    'JWT', 'NextAuth.js', 'VdoCipher', 'Stripe', 'Cloudinary',
+    'Socket.io', 'NodeMailer', 'Recharts'
+  ],
+  problem: `Online instructors face major challenges: video piracy, insecure content delivery, 
+  unreliable payment flows, and the lack of a unified platform that offers course creation, 
+  analytics, and protected streaming. Traditional LMS tools fail to guarantee DRM-level protection 
+  or scalable real-time features.`,
+  
+  solution: `SkillStack solves this by providing a fully secure, modern LMS with VdoCipher DRM 
+  for piracy-proof streaming, Stripe-powered payment-to-enrollment automation, and multi-role 
+  authentication using JWT + NextAuth.js. Redis caching ensures fast, scalable performance, 
+  while instructors get a drag-and-drop curriculum builder, analytics dashboard (Recharts),
+  real-time notifications (Socket.io), and a smooth student learning experience.`,
+  
+  impact: `SkillStack empowers instructors to sell courses confidently without piracy concerns 
+  while giving students a premium, interactive learning experience. The platform demonstrates 
+  enterprise-level security, modern UI/UX, and a scalable architecture ideal for real-world 
+  EdTech systems. It highlights mastery of secure video delivery, WebSockets, caching, and 
+  full-stack production deployment.`,
+  
+  liveLink: 'https://skillstack-demo.vercel.app/', // Replace with your actual link
+  githubLink: 'https://github.com/hussainjamal760/skill-stack', // Replace with your repo
+  lighthouse: 95,
+  imageUrl: 'skillstack1.png',
+  videoUrl: 'skillstack-demo.webm',
+  galleryImages: [
+    'skillstack2.png',
+    'skillstack3.png',
+    'skillstack4.png'
+  ],
+},
+
+{ id: 2 ,
+  title: 'Shippo ,MERN multi-vendor Platform', tagline: 'Full-stack collaborative Ecommerce with real-time features.', tech: ['React.js', 'Express', 'Node.js' ,'MongoDB', 'Tailwind', 'Stripe', 'Socket.io' , 'Cloudinary' ], problem: 'In today’s digital marketplace, small and mid-scale sellers struggle to reach customers efficiently due to limited access to scalable, easy-to-manage online platforms. Most existing e-commerce systems are either too complex or lack real-time interaction between buyers and sellers, leading to poor customer engagement and inefficient order management.', solution: 'SHIPPO solves these challenges by providing a scalable multi-vendor e-commerce platform that empowers sellers to manage their shops, products, and orders effortlessly while ensuring a smooth shopping experience for buyers . It integrates real-time buyer-seller chat (Socket.io), secure JWT-based authentication, and a centralized admin dashboard for system-wide control. Built with React, Node.js, Express, MongoDB, and Tailwind CSS, SHIPPO ensures fast performance, modern UI, and cloud-ready deployment on Vercel.', impact: 'SHIPPO streamlines online retail by bridging the gap between multiple vendors and customers in a single ecosystem. It enables entrepreneurs to scale digitally without technical barriers while offering buyers transparency and instant communication. This project demonstrates how real-time features and scalable architecture can elevate user experience, enhance business efficiency, and pave the way for the future of collaborative e-commerce platforms.', liveLink: 'https://multi-vendor-shippo-1.onrender.com/', githubLink: 'https://github.com/hussainjamal760/multi-vendor-shippo/tree/main', lighthouse: 98, imageUrl: 'shippo1.png',
+   videoUrl: 'mv-vid.webm', 
+   galleryImages: [ 'shippo2.png', 'shippo3.png', 'shippo4.png', ],
+   },
   {
-    id: 1,
-    title: 'Shippo ,MERN multi-vendor Platform',
-    tagline: 'Full-stack collaborative Ecommerce with real-time features.',
-    tech: ['React.js', 'Express', 'Node.js'  ,'MongoDB', 'Tailwind', 'Stripe', 'Socket.io' , 'Cloudinary' ],
-    problem: 'In today’s digital marketplace, small and mid-scale sellers struggle to reach customers efficiently due to limited access to scalable, easy-to-manage online platforms. Most existing e-commerce systems are either too complex or lack real-time interaction between buyers and sellers, leading to poor customer engagement and inefficient order management.',
-    solution: 'SHIPPO solves these challenges by providing a scalable multi-vendor e-commerce platform that empowers sellers to manage their shops, products, and orders effortlessly while ensuring a smooth shopping experience for buyers . It integrates real-time buyer-seller chat (Socket.io), secure JWT-based authentication, and a centralized admin dashboard for system-wide control. Built with React, Node.js, Express, MongoDB, and Tailwind CSS, SHIPPO ensures fast performance, modern UI, and cloud-ready deployment on Vercel.',
-    impact: 'SHIPPO streamlines online retail by bridging the gap between multiple vendors and customers in a single ecosystem. It enables entrepreneurs to scale digitally without technical barriers while offering buyers transparency and instant communication. This project demonstrates how real-time features and scalable architecture can elevate user experience, enhance business efficiency, and pave the way for the future of collaborative e-commerce platforms.',
-    liveLink: 'https://multi-vendor-shippo-1.onrender.com/',
-    githubLink: 'https://github.com/hussainjamal760/multi-vendor-shippo/tree/main',
-    lighthouse: 98,
-    imageUrl: 'shippo1.png', // Placeholder
-    videoUrl: 'mv-vid.webm', // Rickroll for demo
-    galleryImages: [
-      'shippo2.png',
-      'shippo3.png',
-      'shippo4.png',
-    ],
-  },
-  {
-    id: 2,
+    id: 3,
     title: 'Real Estate , MERN Stack Project',
     tagline: 'Scalable real estate project with Node.js and React.',
     tech: ['React.js', 'Express', 'Node.js'  ,'MongoDB', 'Tailwind', 'Cloudinary' ],
@@ -55,7 +80,7 @@ const PROJECTS = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: 'Real-Time Multiplayer Chess Game!',
     tagline: 'Chess game with Socket.io and NODE.',
     tech: ['Node.js', 'Socket.io', 'chess.js'],
@@ -73,6 +98,7 @@ const PROJECTS = [
     ],
   },
 ];
+
 
 const EXPERIENCE = [
   { role: 'Bronze level Fellow', company: 'Dev Weekends', years: '2025 - Present', description: 'Three months of the Dev Weekend Fellowship were a transformative journey  I pushed my limits, mastered the MERN Stack, and strengthened my problem-solving with DSA. It taught me consistency, teamwork, and the real meaning of growth through continuous learning.' },
