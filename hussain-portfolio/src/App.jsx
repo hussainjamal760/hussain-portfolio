@@ -43,11 +43,11 @@ const PROJECTS = [
   EdTech systems. It highlights mastery of secure video delivery, WebSockets, caching, and 
   full-stack production deployment.`,
   
-  liveLink: 'https://skillstack-demo.vercel.app/', // Replace with your actual link
+  liveLink: 'https://skillstack-frontend-one.vercel.app/', // Replace with your actual link
   githubLink: 'https://github.com/hussainjamal760/skill-stack', // Replace with your repo
   lighthouse: 95,
   imageUrl: 'skillstack1.png',
-  videoUrl: 'skillstack-demo.webm',
+  videoUrl: 'skillstack-demo.mp4',
   galleryImages: [
     'skillstack2.png',
     'skillstack3.png',
