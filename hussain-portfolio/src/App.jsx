@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence, useInView, useReducedMotion, useMotionValue, useTransform } from 'framer-motion';
 import { Sun, Moon, Briefcase, GraduationCap, Code, Globe, Github, Zap, Download, Mail, ArrowUp, X, Trophy, BookOpen, Link, Monitor } from 'lucide-react'; // Added Trophy, BookOpen, Link, Monitor, and X icons
 
-// --- 1. CONFIGURATION AND MOCK DATA ---
+
 const COLORS = {
   navy: '#0B1220',
   cyan: '#00D1FF',
